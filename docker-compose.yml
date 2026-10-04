@@ -1,0 +1,9 @@
+services:
+  djh-checker:
+    #build: .
+    image: ghcr.io/pixo2000/djh-checker:latest
+    container_name: djh-checker
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/data
